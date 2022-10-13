@@ -1,0 +1,14 @@
+Comandos!
+
+1 - Instalar o Postgres
+
+2 - npm i -> para instalar as dependencias.
+
+3 - Instalar o Knex de forma Global -> npm i -g knex
+
+4 - O Segredo no arquivo .env -> module.exports = { authSecret: '86711977' }
+
+5 - Tem que start o mongodb.
+/////////////////////////////////////////////////
+
+1 - Start o frontend com o -> npm run serve -- --port 8081

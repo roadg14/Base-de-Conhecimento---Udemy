@@ -1,0 +1,14 @@
+
+1 - C:\Program Files\PostgreSQL\14\bin -> Coloca no Path do sistema de variaveis.
+
+2 - Abra um CMD e coloque esse comando -> psql -U postgres / e a senha que voce usou na instalação - Senha:86711977
+
+3 - Comandos -> 
+\l
+create database teste_install;
+\c teste_install -> para se conectar no banco.
+\dt -> Lista o banco
+\q
+/////////////////////////////////////////////////
+
+Banco PostgreSQL criado -> knowledge_final
