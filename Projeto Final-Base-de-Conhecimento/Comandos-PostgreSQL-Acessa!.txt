@@ -5,10 +5,11 @@
 
 3 - Comandos -> 
 \l
-create database teste_install;
+create database teste_install; -> para criar um banco.
 \c teste_install -> para se conectar no banco.
 \dt -> Lista o banco
 \q
+
 /////////////////////////////////////////////////
 
 Banco PostgreSQL criado -> knowledge_final

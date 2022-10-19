@@ -1,5 +1,7 @@
 Comandos!
 
+Para start o Backend - npm start
+
 1 - Instalar o Postgres
 
 2 - npm i -> para instalar as dependencias.
@@ -8,7 +10,17 @@ Comandos!
 
 4 - O Segredo no arquivo .env -> module.exports = { authSecret: '86711977' }
 
-5 - Tem que start o mongodb.
+5 - Tem que start o mongodb. -> indo ate a pasta dele para da start.
+
+6 - Criando o arquivo para banco de dados em knex que é knexfile.js -> npx knex init 
+
+7 - Criando as tabelas migrate -> npx knex migrate:make create_table_users
+no final de table_  voce pode coloca qual o nome da tabela.
+
+8 - Executando todas as migrate -> npx knex migrate:latest 
+assim ele vai criar no Postgres todas essas tabelas.
+Comando pra desfazer -> knex migrate:rollback
+
 /////////////////////////////////////////////////
 
 1 - Start o frontend com o -> npm run serve -- --port 8081
