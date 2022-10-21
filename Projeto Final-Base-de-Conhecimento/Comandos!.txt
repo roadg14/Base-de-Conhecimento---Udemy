@@ -23,4 +23,12 @@ Comando pra desfazer -> knex migrate:rollback
 
 /////////////////////////////////////////////////
 
+Arquivo que não pode ir e niguem pode saber que ele existe -> .env
+Ele guarda a chave para autenticação para sempre saber.
+ARQUIVO -> .ENV -> serve ara fazer as autenticação sempre deixa ele no git.ignore para que não va para o github.
+
+o modelo para usar é o Env_file.
+
+1 - site para saber masi osbre a expecificação do token -> jwt.io 
+
 1 - Start o frontend com o -> npm run serve -- --port 8081

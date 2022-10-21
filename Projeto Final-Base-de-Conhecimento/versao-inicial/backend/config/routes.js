@@ -1,5 +1,10 @@
 // Routes.js é onde vai ser minhas rotas.
 module.exports = app => {
+    // Públicas URL's que qualquer um pode acessar.
+    app.post('/signup', app.api.user.save)
+    app.post('/signin', app.api.auth.signin)
+    app.post('/validateToken', app.api.auth.validateToken)
+
     app.route('/users') // Consign acessa função de outro arquivo em outro pasta
     .post(app.api.user.save) // Assim que se usar para acessar o arquivo de outra pasta Usando o 'Consign'.
     .get(app.api.user.get) // O Metodo Get que está em user.js
@@ -29,4 +34,7 @@ module.exports = app => {
     .get(app.api.article.getById) // Pesquisa.
     .put(app.api.article.save) // Fazendo a alteração.
     .delete(app.api.article.remove) // Excluir.
+
+    app.route('/categories/:id/articles')
+    .get(app.api.article.getByCategory) // Consulta em Knex a funçãi esta em article.js
 }

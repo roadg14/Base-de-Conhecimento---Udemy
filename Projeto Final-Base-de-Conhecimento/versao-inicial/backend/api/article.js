@@ -85,12 +85,13 @@ module.exports = app => {
 
         const ids = categories.rows.map(c => c.id) // Aqui vai gerar uma Array de ID's e os ID'S das Filhos.
 
+        // Consulta em Knex.
         app.db({ a: 'articles', u: 'users' }) // Fazendo uma consultar tanto no article, tanto no users.
             .select('a.id', 'a.name', 'a.description', 'a.imageUrl', { author: 'u.name' }) // Selecionando id,name,descrição,imagen. e Fazendo que o Author seja o nome.
             .limit(limit).offset(page * limit -limit) //
             .whereRaw('?? = ??', ['u.id', 'a.userId']) // Igualando tabelas // Tambem encontra o autor do artigo.
             .whereIn('categoryId', ids) // Dentro dos parâmetros estabelecidos 
-            .orderBy('a.id', 'desc')
+            .orderBy('a.id', 'desc')  // Uma ordenação. Deicando por ordem.
             .then(articles => res.json(articles))
             .catch(err => res.status(500).send(err))
 
