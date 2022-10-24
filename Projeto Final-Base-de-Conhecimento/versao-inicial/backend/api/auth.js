@@ -23,7 +23,7 @@ module.exports = app => {
         const now = Math.floor(Data.now() / 1000) // Pegando o valor em Segundos.
 
         // Função para gerar o token.
-        const payload = { // Pegando o conteudo para o token.
+        const payload = { // Pegando o conteudo para o token. // Essa função esta ligada com o .config/passport.js
             id: user.id,
             name: user.name,
             email: user.email,

@@ -1,0 +1,17 @@
+
+Cadastro!
+
+{
+    "name": "Debora Luiza",
+    "email": "deboraluiza@gmail.com",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "admin": true 
+}
+
+Login!
+
+{
+    "email": "deboraluiza@gmail.com",
+    "password": "123456"
+}

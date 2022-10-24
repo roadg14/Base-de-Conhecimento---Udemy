@@ -15,6 +15,9 @@ module.exports = app => { // app -> instância do express.
         const user = { ...req.body } // Clonando body
         if(req.params.id) user.id = req.params.id // Fazer alteração caso ID esteja informado na URL e já exista no BD.
 
+        if(!req.originalUrl.startsWith('/users')) user.admin = false
+        if(!req.user || !req.user.admin) user.admin = false
+
         try { // Se não exitir | value, mgs // Essas são as mensagens que vão aparecer na Validação.
             existsOrError(user.name, 'Nome não informado') // Quando o nome não for informado.
             existsOrError(user.email, 'E-mail não informado') // Quando o email não for informado.

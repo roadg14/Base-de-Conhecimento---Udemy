@@ -1,0 +1,2 @@
+MongoDB vai da uns erros porem é só a atulização dele.
+"mongoose": "^5.9.13"
