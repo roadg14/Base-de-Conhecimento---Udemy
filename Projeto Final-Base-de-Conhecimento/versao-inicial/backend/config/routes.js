@@ -11,6 +11,7 @@ module.exports = app => {
     .all(app.config.passport.authenticate()) // Autentica usuário logado
     .post(admin(app.api.user.save)) // Assim que se usar para acessar o arquivo de outra pasta Usando o 'Consign'.
     .get(admin(app.api.user.get)) // O Metodo Get que está em user.js
+    .delete(admin(app.api.user.remove)) // Removendo o Usuario.
 
     app.route('/users/:id') // Outra URL com ja selecionado o ID já para alterar. -> /:id ai que vai saber quem vai ser inserido ou alterado.
     .all(app.config.passport.authenticate()) // Autentica usuário logado

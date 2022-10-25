@@ -15,6 +15,7 @@ consign() // Chamando a função. // Consign vai ser responsavel para passar par
     .then('./config/middlewares.js') // Encadiando por que o consign esta nesse arquivo.
     .then('./api/validation.js') // Executa primeiro validação do usuário.
     .then('./api') // O consign vai carregar todos que estiver na PASTA API.
+    .then('/schedule') // Aqui dentro tem o temporizador das estatisticas para fica atualizando.
     .then('./config/routes.js')  // Tambem vai carrega os routes que estiverem no arquivo routes.js
     .into(app) // Injeta app em cada uma das dependências
 

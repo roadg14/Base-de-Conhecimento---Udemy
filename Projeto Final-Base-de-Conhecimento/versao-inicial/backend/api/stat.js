@@ -1,4 +1,4 @@
-// Estatísticas.
+// Estatísticas. Uma Função de agendamento.
 module.exports = app => {
     const Stat = app.mongoose.model('Stat', { // Modelos.
         users: Number,

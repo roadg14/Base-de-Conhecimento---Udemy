@@ -1,3 +1,4 @@
+import "font-awesome/css/font-awesome.css" // Tem que importa essa font-awesome. para que a seta de desce o menu apareça.
 import Vue from 'vue'
 
 import App from './App'

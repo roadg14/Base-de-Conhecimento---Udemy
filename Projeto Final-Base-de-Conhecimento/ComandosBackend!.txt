@@ -31,4 +31,19 @@ o modelo para usar é o Env_file.
 
 1 - site para saber masi osbre a expecificação do token -> jwt.io 
 
+Startar o backend é -> npm start
+
 1 - Start o frontend com o -> npm run serve -- --port 8081
+
+Os comandos que vai colocar no arquivo .Env *
+module.exports = {
+    authSecret: 'SenhaSecreta',
+    db: {
+        host : '127.0.0.1',
+        port: 5432,
+        database: 'knowledge',
+        user: 'postgres',
+        password: '86711977'
+    }
+}
+//////////////////////////////////

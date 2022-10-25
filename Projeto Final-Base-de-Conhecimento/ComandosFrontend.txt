@@ -1,0 +1,6 @@
+1 - Instalar a extensão -> VETUR.
+
+2 - Criando um favicon.ico no site -> https://realfavicongenerator.net/
+Onde eu encontrei a imagem para fazer o favicon -> https://www.flaticon.com/br/packs/superheroes
+
+3 - 
