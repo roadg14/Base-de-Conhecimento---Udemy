@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<Header title="Douglas - Projeto Base de Conhecimento"/>
+		<Header title="Douglas - Projeto Base de Conhecimento" :hideToggle="false" /> <!-- Para aceitar esse hidetoggle precisa coloca os dois pontos -> : para intepretar. -->
 		<Menu />
 		<Content />
 		<Footer />
