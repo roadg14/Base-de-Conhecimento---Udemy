@@ -5,7 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        isMenuVisible: true
+        isMenuVisible: true,
+        user: { // Usuario.
+            name: 'Usuario Mock',
+            email: 'mock@gmail.com'
+        }
     },
     mutations: { // ALTERANDO O hideToggle -> Para True e False.
         toggleMenu(state, isVisible){ // Função para Quando for clicado o menu fica True e para quando estiver sem nada coloca False.

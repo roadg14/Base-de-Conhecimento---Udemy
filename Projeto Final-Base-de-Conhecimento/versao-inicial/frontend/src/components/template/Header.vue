@@ -1,24 +1,30 @@
 <template>
     <header class="header">
         <a class="toggle" @click="toggleMenu" v-if="!hideToggle"> <!-- @click -> é para da um evento ao clicar. // hidetoggle -> é para esconder a setinha que vai mostrar-->
-            <i class="fa fa-lg" :class="icon"></i>
+            <i class="fa fa-align" :class="icon"></i>
         </a>
         <h1 class="title">
             {{ title }}
         </h1>
+        <UserDropdown v-if="!hideUserDropdown" />
     </header>
 </template>
 
 <script>
+
+import UserDropdown from './UserDropdown.vue' // Importado o UserDropdown.vue para o usuario.
+
 export default {
     name: 'Header',
+    components: { UserDropdown },
     props: {
         title: String,
         hideToggle: Boolean, // Vai ser um Botão que vai aparecer certos menus.
+        hideUserDropdown: Boolean // Fazendo a mesma coisa para o usuario, quando for clicando mostrar as opções.
     },
     computed: {
-        icon() {
-            return "fa-angle-left"
+        icon() { // Um retorno ternario.
+            return this.$store.state.isMenuVisible ? "fa-angle-double-left" : "fa-angle-double-down"
         }
     },
     methods: {
@@ -41,10 +47,11 @@ export default {
 
     .title {
         font-size: 1.2rem;
-        color: #fff;
+        color: #000;
         font-weight: 100;
         flex-grow: 1; /* title pode crescer dentro do flex container */
         text-align: center;
+        margin-top: 8px;
     }
 
     .title a {

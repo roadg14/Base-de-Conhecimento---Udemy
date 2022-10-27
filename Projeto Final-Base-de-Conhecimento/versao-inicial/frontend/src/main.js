@@ -3,6 +3,7 @@ import Vue from 'vue'
 
 import App from './App'
 import store from './config/store' // Importando de store.js
+import './config/bootstrap' // Importando o Bootstrap.js
 
 Vue.config.productionTip = false
 
