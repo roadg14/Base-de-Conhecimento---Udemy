@@ -4,7 +4,7 @@
             <i class="fa fa-align" :class="icon"></i>
         </a>
         <h1 class="title">
-            {{ title }}
+            <router-link to="/">{{ title }}</router-link>
         </h1>
         <UserDropdown v-if="!hideUserDropdown" />
     </header>
@@ -38,7 +38,7 @@ export default {
 <style>
     .header {
         grid-area: header;
-        background: linear-gradient(to right, #ce501e, #db0f0f);
+        background: linear-gradient(to right, #1e70ce, #1973da);
         
         display: flex;
         justify-content: center;
@@ -55,11 +55,11 @@ export default {
     }
 
     .title a {
-        color: #fff;
+        color: black;
         text-decoration: none;
     }
 
-    .title a:hover+ {
+    .title a:hover {
         color: #fff;
         text-decoration: none;
     }

@@ -1,3 +1,5 @@
+const queries = require('./queries')
+
 module.exports = app => {
     const { existsOrError } = app.api.validation // Acessando as Funções que estão no Validation.js.
 

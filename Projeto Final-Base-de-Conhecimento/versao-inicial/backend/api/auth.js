@@ -20,7 +20,7 @@ module.exports = app => {
         if(!isMatch) return res.status(401).send('Email ou Senha inválido(s)') // Se não for igual, vai mostrar a mensagem de erro.
     
         // Função para Gerar o tempo para um novo token tanto por horas tanto por minutos.
-        const now = Math.floor(Data.now() / 1000) // Pegando o valor em Segundos.
+        const now = Math.floor(Date.now() / 1000) // Pegando o valor em Segundos.
 
         // Função para gerar o token.
         const payload = { // Pegando o conteudo para o token. // Essa função esta ligada com o .config/passport.js

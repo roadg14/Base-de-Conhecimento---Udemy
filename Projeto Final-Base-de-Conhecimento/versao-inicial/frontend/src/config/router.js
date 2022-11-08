@@ -16,7 +16,7 @@ const routes = [{ // Array de objetos // A base das Routes.
     component: AdminPages
 }]
 
-export default new VueRouter({ // Instanciando VueRouter
-    mode: 'history',
+export default new VueRouter({ // Instanciando VueRouter 
+    mode: 'history', // Modo history para deixa a url bonitinha.
     routes // === routes: routes -> array de objetos
 })
