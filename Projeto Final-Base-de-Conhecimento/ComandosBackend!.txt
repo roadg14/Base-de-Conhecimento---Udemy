@@ -14,12 +14,16 @@ Para start o Backend - npm start
 
 6 - Criando o arquivo para banco de dados em knex que é knexfile.js -> npx knex init 
 
-7 - Criando as tabelas migrate -> npx knex migrate:make create_table_users
+7 - Criando as tabelas migrate -> 
+npx knex migrate:make create_table_users
+npx knex migrate:make create_table_categories
+npx knex migrate:make create_table_articles
+
 no final de table_  voce pode coloca qual o nome da tabela.
 
 8 - Executando todas as migrate -> npx knex migrate:latest 
 assim ele vai criar no Postgres todas essas tabelas.
-Comando pra desfazer -> knex migrate:rollback
+Comando pra desfazer -> npx knex migrate:rollback
 
 /////////////////////////////////////////////////
 

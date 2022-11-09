@@ -1,0 +1,8 @@
+Criandor de mensagem quando for gerado algum erro ou acertos.
+cadastros e tals
+
+Acessar antes para olhar e lembrar oque é.
+
+é uma dependencia. vue.toasted
+
+https://www.npmjs.com/package/vue-toasted

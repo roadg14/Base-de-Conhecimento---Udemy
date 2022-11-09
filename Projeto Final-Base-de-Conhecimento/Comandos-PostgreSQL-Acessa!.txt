@@ -3,12 +3,18 @@
 2 - Abra um CMD e coloque esse comando -> psql -U postgres / e a senha que voce usou na instalação - Senha:86711977
 
 3 - Comandos -> 
-\l
-create database teste_install; -> para criar um banco.
-\c teste_install -> para se conectar no banco.
-\dt -> Lista o banco
-\q
+Para ver as pastas -> \l
+Comando para criar um banco -> create database teste_install; -> para criar um banco.
+Para entra no Banco -> \c e o nome do banco para se conectar no banco.
+Lista de pastas criadas -> \dt -> Lista o banco
+pasta  \q
 
 /////////////////////////////////////////////////
 
 Banco PostgreSQL criado -> knowledge
+
+Fazendo os usuarios se tornando admin -> update users set admin = true where id = 1;
+
+selecionando o usuario e deletando -> delete from users where id = 1
+
+Excluindo um bando de dados -> DROP DATABASE nome do banco;

@@ -2,6 +2,7 @@ import "font-awesome/css/font-awesome.css" // Tem que importa essa font-awesome.
 import Vue from 'vue'
 
 import App from './App'
+
 import store from './config/store' // Importando de store.js
 import router from './config/router' // Importando route.js as rotas. 
 import './config/bootstrap' // Importando o Bootstrap.js
@@ -9,10 +10,10 @@ import './config/bootstrap' // Importando o Bootstrap.js
 Vue.config.productionTip = false
 
 // TEMPORARIO!
-require('axios').defaults.headers.common['Autorization'] = 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwibmFtZSI6IkRvdWdsYXMgUm9kcmlndWVzIiwiZW1haWwiOiJkb3VnbGFzZ2MxM0BnbWFpbC5jb20iLCJhZG1pbiI6ZmFsc2UsImlhdCI6MTY2NzkyMjg2NiwiZXhwIjoxNjY4MTgyMDY2fQ.b0ztga5P_jgvyl24RTE4TRRBHyC827aIDjMmS3kctJc'
+require('axios').defaults.headers.common['Autorization'] = 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6OSwibmFtZSI6IkRvdWdsYXMgRmVycmVpcmEiLCJlbWFpbCI6ImRvdWdsYXMxMjJAZ21haWwuY29tIiwiYWRtaW4iOnRydWUsImlhdCI6MTY2ODAwMzI4MiwiZXhwIjoxNjY4MjYyNDgyfQ.POMDJNem_ygmw1tjfZyUZpChKds5r7Ym-_AuBe7Gqg8'
 
 new Vue({
-  store, // Associando ela para funcionar.
-  router, // Colocando a rotas para funcionar.
+  store, // Associando ela para funcionar. // store pode ser compartilhada entre componentes
+  router, // Colocando a rotas para funcionar. // router pode ser compartilhada entre componentes
   render: h => h(App)
 }).$mount('#app')

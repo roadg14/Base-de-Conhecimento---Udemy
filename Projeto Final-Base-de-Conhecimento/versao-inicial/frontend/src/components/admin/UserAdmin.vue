@@ -1,6 +1,6 @@
 <template>
     <div class="user-admin">
-        <h1>Usuários Componente</h1>
+        <b-table hover striped :items="users" :fields="fields"></b-table>
     </div>
 </template>
 
@@ -17,14 +17,22 @@ export default {
             mode: "save", // Put, Post ou Delete
             user: {},
             users: [], // Será renderizado na tabela 
+            fields: [
+                { key: "id", label: "Código", sortable: true },
+                { key: "name", label: "Nome", sortable: true },
+                { key: "email", label: "E-mail", sortable: true },
+                { key: "admin", label: "Administrador", sortable: true,
+                    formatter: value => (value ? "Sim" : "Não")
+                },
+                { key: "actions", label: "Ações" }
+            ]
         }
     },
     methods: {
-        loadUsers() { // Para carregar a lista de usuarios do backend.
+        loadUsers() {
             const url = `${baseApiUrl}/users`
             axios.get(url).then(res => {
                 this.users = res.data
-                console.log(this.users)
             })
         }
     },
